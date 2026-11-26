@@ -4,11 +4,11 @@ Studim retrospektiv kompjuterik i vrojtimeve historike të insekteve (GBIF) në 
 
 > **Rekordet ≠ insekte.** Projekti tregon çfarë është *dokumentuar*, jo sa insekte jetojnë realisht në një zonë.
 
-**Statusi:** Java 1, prova e fizibilitetit. Ende nuk ka dataset final, model AI apo aplikacion.
+**Statusi:** Java 2, metodologjia fillestare: literatura (9 burime), protokolli v0 dhe mostra reale e të dhënave. Ende nuk ka dataset final me DOI, model AI apo aplikacion.
 
 ## Instalimi
 
-Kërkon Python ≥ 3.10.
+Kërkon Python ≥ 3.10. Varësitë: `pytest`, `pandas`.
 
 ```bash
 python -m venv .venv
@@ -27,13 +27,24 @@ python scripts/gbif_probe.py
 - Skripti ka nevojë për internet (`api.gbif.org`). Pa lidhje, gabimet ruhen te `preview.json` dhe skripti kthen kodin 1.
 - Nuk kërkohet llogari GBIF për API Search. Për shkarkimin final (Java 2–3) do të nevojitet llogari, por **asnjë kredencial nuk ruhet në repo**.
 
+## Java 2: mostra dhe leximi i saj
+
+```bash
+python scripts/gbif_sample.py     # → data/sample/sample_data.csv, raw/*.json, manifest.json
+python scripts/read_sample.py     # → outputs/sample_report.md (leximi me pandas + filtrat)
+```
+
+- `gbif_sample.py` merr deri në 50 rekorde për çdo zonë × takson dhe ruan përgjigjet origjinale **të pandryshuara** te `data/sample/raw/`. Manifesti ruan burimin, parametrat, URL-të, kohën dhe SHA-256 e çdo skedari.
+- `read_sample.py` lexon CSV-në me pandas, provon 6 filtra (përfshirë 2 që duhet të kthejnë bosh) dhe kontrollon që skedari origjinal nuk ndryshoi.
+- Mostra është provë: **nuk ka DOI** dhe nuk është e rastësishme (API kthen së pari rekordet më të reja). Shkarkimi final me DOI bëhet në Javën 3.
+
 ## Testet
 
 ```bash
 python -m pytest -v
 ```
 
-8 teste automatike, që punojnë pa internet mbi një shembull **sintetik** (`tests/fixtures/`): struktura e përgjigjes, mbulimi i fushave, vlefshmëria e datës dhe koordinatave, parametrat e kërkimit, dhe një smoke test i gjithë skriptit me përgjigje të simuluara. Prova e kalimit ruhet te `outputs/test_results.txt`.
+12 teste automatike, që punojnë pa internet mbi një shembull **sintetik** (`tests/fixtures/`): 8 nga Java 1 (struktura e përgjigjes, fushat, datat, koordinatat, parametrat, smoke test i skriptit) dhe 4 nga Java 2 (rrafshimi i rekordeve sipas data contract, formatet e papritura, SHA-256, leximi dhe filtrimi me pandas pa ndryshuar të dhënat). Prova e kalimit ruhet te `outputs/test_results.txt`.
 
 ## Rrjedha e të dhënave (skema e thjeshtë)
 
@@ -54,15 +65,18 @@ projekt02/
 ├── data_contract.md     ← fushat e pritshme (draft v0)
 ├── roles.md · risk_log.md
 ├── configs/areas.json   ← zonat (kuti përafruese), taksonet, vitet, filtrat
-├── research/            ← research_brief, glossary, literature_matrix, citations, candidate_areas
-├── scripts/gbif_probe.py
-├── src/ingest/          ← funksione për GBIF (të testueshme pa internet)
-├── src/quality/ · src/analysis/ · src/app/   ← bosh, për javët pasuese
-├── data/raw/ · data/processed/               ← bosh në Javën 1
-├── ai/model_shortlist.md
+├── research/            ← brief, glossary, literatura (matrix, citations, review), candidate_areas,
+│                           protocol_v0, decision_log
+├── scripts/             ← gbif_probe.py (J1), gbif_sample.py, read_sample.py (J2)
+├── src/ingest/          ← funksione për GBIF dhe mostrën (të testueshme pa internet)
+├── src/analysis/        ← leximi dhe filtrimi me pandas
+├── src/quality/ · src/app/                   ← bosh, për javët pasuese
+├── data/sample/         ← mostra reale: raw/*.json (të pandryshuara), sample_data.csv, manifest.json
+├── data/raw/ · data/processed/               ← bosh deri në Javën 3
+├── ai/                  ← model_shortlist.md, photo_criteria.md
 ├── tests/               ← teste + fixture sintetike
-├── outputs/             ← preview.json, test_results.txt
-├── docs/demo_java1.md   ← përmbledhja e demonstrimit javor
+├── outputs/             ← preview.json, sample_report.md, test_results.txt
+├── docs/                ← demo_java1.md, demo_java2.md, ditari
 └── report/
 ```
 

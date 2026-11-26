@@ -119,6 +119,22 @@ def main() -> int:
             manifest["queries"].append(q)
             time.sleep(0.5)
 
+    # datasetName shpesh mungon në rekord → merret nga /dataset/{key} dhe ruhet në manifest
+    datasets: dict[str, dict] = {}
+    for key in sorted({r["dataset_key"] for r in rows if r.get("dataset_key")}):
+        try:
+            d = get_json(f"{GBIF_API}/dataset/{key}")
+            datasets[key] = {"title": d.get("title"), "license": d.get("license"),
+                             "n_rows_in_sample": sum(1 for r in rows if r["dataset_key"] == key)}
+        except Exception as e:  # noqa: BLE001
+            datasets[key] = {"title": None, "error": describe_error(e)}
+    manifest["dataset_name_missing_in_raw"] = sum(1 for r in rows if not r.get("dataset_name"))
+    for r in rows:
+        if not r.get("dataset_name") and r.get("dataset_key") in datasets:
+            r["dataset_name"] = datasets[r["dataset_key"]].get("title")
+    manifest["datasets"] = datasets
+    manifest["dataset_name_note"] = "Kur datasetName mungon në rekord, plotësohet në CSV nga GBIF /dataset/{key}. Raw mbetet i pandryshuar."
+
     csv_path = out_dir / "sample_data.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=CSV_COLUMNS)

@@ -1,6 +1,6 @@
-# AI model shortlist — Java 1 (krahasim në nivel dokumentacioni)
+# AI model shortlist — rishikuar në Javën 2
 
-**Përgjegjës:** Studenti D · **Statusi:** asnjë model nuk është zgjedhur ende dhe **asnjë model nuk trajnohet**. Zgjedhja bëhet në Javën 4 pas provës së inferencës.
+**Statusi:** asnjë model nuk është zgjedhur ende dhe **asnjë model nuk trajnohet**. Zgjedhja bëhet në Javën 4 pas provës së inferencës.
 
 Detyra që do t'i japim modelit: nga një foto insekti (me licencë të lejuar), të sugjerojë taksonin brenda një liste klasash të fiksuar (p.sh. familjet e Lepidoptera/Odonata në Shqipëri), ose të thotë “i pasigurt”.
 
@@ -30,3 +30,14 @@ Fillojmë provën e inferencës (Java 5) me **K1 (BioCLIP)** sepse është më i
 - [ ] Datat e mbledhjes së të dhënave të trajnimit kundrejt datave të fotove tona (rreziku i leakage).
 
 Burimet: [D6] https://github.com/Imageomics/BioCLIP · [D7] https://huggingface.co/imageomics/bioclip · [D9] https://huggingface.co/imageomics/bioclip-2
+
+## Rishikimi i Javës 2
+
+**Statusi i pandryshuar:** BioCLIP mbetet vetëm **kandidat** (vendimi D10 te `research/decision_log.md`). Asnjë saktësi nuk raportohet.
+
+Çfarë u shtua nga literatura dhe mostra:
+- **Versioni:** BioCLIP (CVPR 2024, DOI 10.1109/CVPR52733.2024.01836) dhe BioCLIP 2 (NeurIPS 2025, arXiv:2505.23883). Të dy MIT; të dy ngarkohen me `open_clip` nga Hugging Face.
+- **Çfarë të presim:** edhe modelet e specializuara kanë saktësi të ulët për speciet me pak imazhe [L9: ~67% top-1 në iNat2017]. Prandaj testi bëhet në **nivel familjeje** dhe me **abstention**.
+- **Leakage:** të dhënat e trajnimit të BioCLIP përfshijnë foto iNaturalist. Në mostrën tonë 88/233 rekorde janë nga iNaturalist dhe 126 nga Observation.org → preferohen fotot jashtë iNaturalist (shih `ai/photo_criteria.md`).
+- **Klasat:** lista e familjeve të Lepidoptera (dhe Odonata nëse mbetet) do të nxirret nga dataset-i i Javës 3 dhe fiksohet para testit.
+- **Inferenca:** prova teknike (instalimi i `open_clip_torch`, koha për foto në CPU) shtyhet për Javën 4–5, pasi të jenë gati kriteret e fotove.
