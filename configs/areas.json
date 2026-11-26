@@ -1,0 +1,28 @@
+{
+  "_shenim": "Kuti përafruese (bounding box) VETËM për provën e Javës 1. Nuk janë kufijtë zyrtarë. Në Javën 2 zëvendësohen me poligonet WDPA/AKZM. Koordinatat: gjatësi (lon), gjerësi (lat) në WGS84.",
+  "version": "v0.1-java1",
+  "areas": [
+    {
+      "id": "divjake_karavasta",
+      "name": "Parku Kombëtar Divjakë-Karavasta",
+      "bbox": {"min_lon": 19.38, "min_lat": 40.85, "max_lon": 19.56, "max_lat": 41.05},
+      "boundary_source": "Kuti përafruese e vizatuar me dorë; kufiri zyrtar: WDPA / AKZM (për t'u shkarkuar)"
+    },
+    {
+      "id": "llogara",
+      "name": "Parku Kombëtar Llogara",
+      "bbox": {"min_lon": 19.52, "min_lat": 40.17, "max_lon": 19.63, "max_lat": 40.25},
+      "boundary_source": "Kuti përafruese; kufiri zyrtar: WDPA ID 11667 (protectedplanet.net/11667)"
+    },
+    {
+      "id": "dajti",
+      "name": "Parku Kombëtar Mali i Dajtit",
+      "bbox": {"min_lon": 19.85, "min_lat": 41.30, "max_lon": 20.05, "max_lat": 41.47},
+      "boundary_source": "Kuti përafruese; kufiri zyrtar: WDPA / AKZM (për t'u shkarkuar)"
+    }
+  ],
+  "taxa": ["Lepidoptera", "Odonata"],
+  "years": {"from": 2000, "to": 2025},
+  "filters": {"hasCoordinate": true, "hasGeospatialIssue": false, "country": "AL"},
+  "sample_size": 5
+}

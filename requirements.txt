@@ -1,0 +1,3 @@
+pytest>=7
+# Javët pasuese (ende jo të nevojshme në Javën 1):
+# pandas, geopandas, pyogrio, streamlit, plotly, folium, open_clip_torch

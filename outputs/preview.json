@@ -1,0 +1,655 @@
+{
+  "probe": "GBIF Occurrence API Search — prova e Javës 1",
+  "warning": "Rezultat eksplorues nga API Search (pa DOI). 'count_reported_by_gbif' = numër rekordesh, jo numër insektesh. Zonat janë kuti përafruese, jo kufij zyrtarë.",
+  "source": "https://api.gbif.org/v1",
+  "config_file": "configs\\areas.json",
+  "config_version": "v0.1-java1",
+  "started_at_utc": "2026-11-26T21:32:18+00:00",
+  "taxa": [
+    {
+      "name": "Lepidoptera",
+      "url": "https://api.gbif.org/v1/species/match?name=Lepidoptera&kingdom=Animalia&strict=true",
+      "queried_at": "2026-11-26T21:32:18+00:00",
+      "taxonKey": 797,
+      "rank": "ORDER",
+      "matchType": "EXACT",
+      "status": "ACCEPTED",
+      "ok": true
+    },
+    {
+      "name": "Odonata",
+      "url": "https://api.gbif.org/v1/species/match?name=Odonata&kingdom=Animalia&strict=true",
+      "queried_at": "2026-11-26T21:32:18+00:00",
+      "taxonKey": 789,
+      "rank": "ORDER",
+      "matchType": "EXACT",
+      "status": "ACCEPTED",
+      "ok": true
+    }
+  ],
+  "queries": [
+    {
+      "area_id": "divjake_karavasta",
+      "area_name": "Parku Kombëtar Divjakë-Karavasta",
+      "taxon": "Lepidoptera",
+      "params": {
+        "taxonKey": 797,
+        "geometry": "POLYGON((19.38 40.85, 19.56 40.85, 19.56 41.05, 19.38 41.05, 19.38 40.85))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 5,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=797&geometry=POLYGON%28%2819.38+40.85%2C+19.56+40.85%2C+19.56+41.05%2C+19.38+41.05%2C+19.38+40.85%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=5&country=AL",
+      "queried_at_utc": "2026-11-26T21:32:19+00:00",
+      "result": {
+        "count_reported_by_gbif": 289,
+        "end_of_records": false,
+        "n_sample_returned": 5,
+        "field_coverage_pct_in_sample": {
+          "gbifID": 100.0,
+          "occurrenceID": 100.0,
+          "datasetKey": 100.0,
+          "basisOfRecord": 100.0,
+          "scientificName": 100.0,
+          "taxonKey": 100.0,
+          "taxonRank": 100.0,
+          "order": 100.0,
+          "family": 100.0,
+          "eventDate": 100.0,
+          "year": 100.0,
+          "decimalLatitude": 100.0,
+          "decimalLongitude": 100.0,
+          "coordinateUncertaintyInMeters": 100.0,
+          "issues": 100.0,
+          "license": 100.0,
+          "media": 100.0
+        },
+        "sample_records": [
+          {
+            "gbifID": "5153768141",
+            "scientificName": "Aglais io (Linnaeus, 1758)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-02-18",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 27877.0,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5088098334",
+            "scientificName": "Vanessa cardui (Linnaeus, 1758)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-03-18T10:42:20",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 9.0,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5104374007",
+            "scientificName": "Hyles livornica Esper, 1780",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-03-20T14:41:48",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 16.0,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5104426780",
+            "scientificName": "Nomophila noctuella (Denis & Schiffermüller)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-03-21T10:26:36",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 8.0,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5104432781",
+            "scientificName": "Papilio machaon Linnaeus, 1758",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-03-21T10:39:13",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 10.0,
+            "n_media": 2,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          }
+        ]
+      },
+      "ok": true
+    },
+    {
+      "area_id": "divjake_karavasta",
+      "area_name": "Parku Kombëtar Divjakë-Karavasta",
+      "taxon": "Odonata",
+      "params": {
+        "taxonKey": 789,
+        "geometry": "POLYGON((19.38 40.85, 19.56 40.85, 19.56 41.05, 19.38 41.05, 19.38 40.85))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 5,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=789&geometry=POLYGON%28%2819.38+40.85%2C+19.56+40.85%2C+19.56+41.05%2C+19.38+41.05%2C+19.38+40.85%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=5&country=AL",
+      "queried_at_utc": "2026-11-26T21:32:19+00:00",
+      "result": {
+        "count_reported_by_gbif": 209,
+        "end_of_records": false,
+        "n_sample_returned": 5,
+        "field_coverage_pct_in_sample": {
+          "gbifID": 100.0,
+          "occurrenceID": 100.0,
+          "datasetKey": 100.0,
+          "basisOfRecord": 100.0,
+          "scientificName": 100.0,
+          "taxonKey": 100.0,
+          "taxonRank": 100.0,
+          "order": 100.0,
+          "family": 100.0,
+          "eventDate": 100.0,
+          "year": 100.0,
+          "decimalLatitude": 100.0,
+          "decimalLongitude": 100.0,
+          "coordinateUncertaintyInMeters": 80.0,
+          "issues": 20.0,
+          "license": 100.0,
+          "media": 20.0
+        },
+        "sample_records": [
+          {
+            "gbifID": "5140872269",
+            "scientificName": "Lestes barbarus (Fabricius, 1798)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-04-27T15:59:16",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": null,
+            "n_media": 2,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5158321178",
+            "scientificName": "Ischnura elegans (Vander Linden, 1820)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-04",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 61.0,
+            "n_media": 0,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5212528568",
+            "scientificName": "Crocothemis erythraea (Brullé, 1832)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-31",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 4.0,
+            "n_media": 0,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5234155370",
+            "scientificName": "Crocothemis erythraea (Brullé, 1832)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-31",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 3.0,
+            "n_media": 0,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5234696466",
+            "scientificName": "Lestes barbarus (Fabricius, 1798)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-31",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 3.0,
+            "n_media": 0,
+            "validation_problems": []
+          }
+        ]
+      },
+      "ok": true
+    },
+    {
+      "area_id": "llogara",
+      "area_name": "Parku Kombëtar Llogara",
+      "taxon": "Lepidoptera",
+      "params": {
+        "taxonKey": 797,
+        "geometry": "POLYGON((19.52 40.17, 19.63 40.17, 19.63 40.25, 19.52 40.25, 19.52 40.17))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 5,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=797&geometry=POLYGON%28%2819.52+40.17%2C+19.63+40.17%2C+19.63+40.25%2C+19.52+40.25%2C+19.52+40.17%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=5&country=AL",
+      "queried_at_utc": "2026-11-26T21:32:20+00:00",
+      "result": {
+        "count_reported_by_gbif": 239,
+        "end_of_records": false,
+        "n_sample_returned": 5,
+        "field_coverage_pct_in_sample": {
+          "gbifID": 100.0,
+          "occurrenceID": 100.0,
+          "datasetKey": 100.0,
+          "basisOfRecord": 100.0,
+          "scientificName": 100.0,
+          "taxonKey": 100.0,
+          "taxonRank": 100.0,
+          "order": 100.0,
+          "family": 100.0,
+          "eventDate": 100.0,
+          "year": 100.0,
+          "decimalLatitude": 100.0,
+          "decimalLongitude": 100.0,
+          "coordinateUncertaintyInMeters": 40.0,
+          "issues": 80.0,
+          "license": 100.0,
+          "media": 80.0
+        },
+        "sample_records": [
+          {
+            "gbifID": "5134107733",
+            "scientificName": "Hyles livornica Esper, 1780",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-04-18T19:49:19",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": null,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5168209309",
+            "scientificName": "Cydalima perspectalis (Walker, 1859)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-01T11:31",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 578.0,
+            "n_media": 0,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5170982388",
+            "scientificName": "Parnassius mnemosyne (Linnaeus, 1758)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-18",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 5000.0,
+            "n_media": 1,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5216722788",
+            "scientificName": "Cydalima perspectalis (Walker, 1859)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-28T11:36",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": null,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5187622054",
+            "scientificName": "Issoria lathonia (Linnaeus, 1758)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-06-05T16:24:23",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": null,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          }
+        ]
+      },
+      "ok": true
+    },
+    {
+      "area_id": "llogara",
+      "area_name": "Parku Kombëtar Llogara",
+      "taxon": "Odonata",
+      "params": {
+        "taxonKey": 789,
+        "geometry": "POLYGON((19.52 40.17, 19.63 40.17, 19.63 40.25, 19.52 40.25, 19.52 40.17))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 5,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=789&geometry=POLYGON%28%2819.52+40.17%2C+19.63+40.17%2C+19.63+40.25%2C+19.52+40.25%2C+19.52+40.17%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=5&country=AL",
+      "queried_at_utc": "2026-11-26T21:32:21+00:00",
+      "result": {
+        "count_reported_by_gbif": 21,
+        "end_of_records": false,
+        "n_sample_returned": 5,
+        "field_coverage_pct_in_sample": {
+          "gbifID": 100.0,
+          "occurrenceID": 100.0,
+          "datasetKey": 100.0,
+          "basisOfRecord": 100.0,
+          "scientificName": 100.0,
+          "taxonKey": 100.0,
+          "taxonRank": 100.0,
+          "order": 100.0,
+          "family": 100.0,
+          "eventDate": 100.0,
+          "year": 100.0,
+          "decimalLatitude": 100.0,
+          "decimalLongitude": 100.0,
+          "coordinateUncertaintyInMeters": 100.0,
+          "issues": 40.0,
+          "license": 100.0,
+          "media": 60.0
+        },
+        "sample_records": [
+          {
+            "gbifID": "5234974613",
+            "scientificName": "Sympetrum striolatum (Charpentier, 1840)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-07-14",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 3.0,
+            "n_media": 0,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5283137186",
+            "scientificName": "Sympetrum striolatum (Charpentier, 1840)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-08-01",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 3.0,
+            "n_media": 2,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5932384011",
+            "scientificName": "Sympetrum fonscolombii (Selys, 1840)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-08-10T07:11:57",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 3.0,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5008704701",
+            "scientificName": "Anax imperator Leach, 1815",
+            "taxonRank": "SPECIES",
+            "eventDate": "2024-05-25",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 18.0,
+            "n_media": 0,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5006821685",
+            "scientificName": "Sympetrum fonscolombii (Selys, 1840)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2024-06-21T12:41",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 61.0,
+            "n_media": 2,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          }
+        ]
+      },
+      "ok": true
+    },
+    {
+      "area_id": "dajti",
+      "area_name": "Parku Kombëtar Mali i Dajtit",
+      "taxon": "Lepidoptera",
+      "params": {
+        "taxonKey": 797,
+        "geometry": "POLYGON((19.85 41.3, 20.05 41.3, 20.05 41.47, 19.85 41.47, 19.85 41.3))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 5,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=797&geometry=POLYGON%28%2819.85+41.3%2C+20.05+41.3%2C+20.05+41.47%2C+19.85+41.47%2C+19.85+41.3%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=5&country=AL",
+      "queried_at_utc": "2026-11-26T21:32:22+00:00",
+      "result": {
+        "count_reported_by_gbif": 285,
+        "end_of_records": false,
+        "n_sample_returned": 5,
+        "field_coverage_pct_in_sample": {
+          "gbifID": 100.0,
+          "occurrenceID": 100.0,
+          "datasetKey": 100.0,
+          "basisOfRecord": 100.0,
+          "scientificName": 100.0,
+          "taxonKey": 100.0,
+          "taxonRank": 100.0,
+          "order": 100.0,
+          "family": 100.0,
+          "eventDate": 100.0,
+          "year": 100.0,
+          "decimalLatitude": 100.0,
+          "decimalLongitude": 100.0,
+          "coordinateUncertaintyInMeters": 100.0,
+          "issues": 20.0,
+          "license": 100.0,
+          "media": 100.0
+        },
+        "sample_records": [
+          {
+            "gbifID": "5107980843",
+            "scientificName": "Vanessa cardui (Linnaeus, 1758)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-04-07",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 135.0,
+            "n_media": 1,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5140847395",
+            "scientificName": "Heliothis peltigera (Denis & Schiffermüller) , 1775",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-04-27",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 27816.0,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "5141696736",
+            "scientificName": "Saturnia pyri (Denis & Schiffermüller) , 1775",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-04-29",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 1.0,
+            "n_media": 1,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5157847742",
+            "scientificName": "Erynnis tages (Linnaeus, 1758)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-07",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 71.0,
+            "n_media": 1,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "5158624764",
+            "scientificName": "Erynnis tages (Linnaeus, 1758)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2025-05-07",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 71.0,
+            "n_media": 1,
+            "validation_problems": []
+          }
+        ]
+      },
+      "ok": true
+    },
+    {
+      "area_id": "dajti",
+      "area_name": "Parku Kombëtar Mali i Dajtit",
+      "taxon": "Odonata",
+      "params": {
+        "taxonKey": 789,
+        "geometry": "POLYGON((19.85 41.3, 20.05 41.3, 20.05 41.47, 19.85 41.47, 19.85 41.3))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 5,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=789&geometry=POLYGON%28%2819.85+41.3%2C+20.05+41.3%2C+20.05+41.47%2C+19.85+41.47%2C+19.85+41.3%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=5&country=AL",
+      "queried_at_utc": "2026-11-26T21:32:23+00:00",
+      "result": {
+        "count_reported_by_gbif": 12,
+        "end_of_records": false,
+        "n_sample_returned": 5,
+        "field_coverage_pct_in_sample": {
+          "gbifID": 100.0,
+          "occurrenceID": 100.0,
+          "datasetKey": 100.0,
+          "basisOfRecord": 100.0,
+          "scientificName": 100.0,
+          "taxonKey": 100.0,
+          "taxonRank": 100.0,
+          "order": 100.0,
+          "family": 100.0,
+          "eventDate": 100.0,
+          "year": 100.0,
+          "decimalLatitude": 100.0,
+          "decimalLongitude": 100.0,
+          "coordinateUncertaintyInMeters": 60.0,
+          "issues": 40.0,
+          "license": 100.0,
+          "media": 100.0
+        },
+        "sample_records": [
+          {
+            "gbifID": "5008672158",
+            "scientificName": "Sympetrum striolatum (Charpentier, 1840)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2024-06-04",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 3.0,
+            "n_media": 1,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "6150959522",
+            "scientificName": "Sympetrum fonscolombii (Selys, 1840)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2024-06-04",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 3.0,
+            "n_media": 1,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "6182923337",
+            "scientificName": "Coenagrion scitulum (Rambur, 1842)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2024-06-04",
+            "datasetKey": "8a863029-f435-446a-821e-275f4f641165",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": 4.0,
+            "n_media": 1,
+            "validation_problems": []
+          },
+          {
+            "gbifID": "4923724464",
+            "scientificName": "Sympetrum meridionale (Selys, 1841)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2024-08-12T18:20",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": null,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          },
+          {
+            "gbifID": "4925841395",
+            "scientificName": "Orthetrum albistylum (Selys, 1848)",
+            "taxonRank": "SPECIES",
+            "eventDate": "2024-08-12T09:11",
+            "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+            "basisOfRecord": "HUMAN_OBSERVATION",
+            "coordinateUncertaintyInMeters": null,
+            "n_media": 1,
+            "validation_problems": [
+              "ka_issue_flags_gbif"
+            ]
+          }
+        ]
+      },
+      "ok": true
+    }
+  ],
+  "finished_at_utc": "2026-11-26T21:32:24+00:00",
+  "summary": {
+    "queries_total": 6,
+    "queries_ok": 6
+  }
+}

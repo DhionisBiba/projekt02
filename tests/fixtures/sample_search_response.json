@@ -1,0 +1,59 @@
+{
+  "_shenim": "SHEMBULL SINTETIK për teste. Nuk janë të dhëna reale të GBIF. Struktura ndjek formatin e /occurrence/search.",
+  "offset": 0,
+  "limit": 3,
+  "endOfRecords": false,
+  "count": 3,
+  "results": [
+    {
+      "key": 1000000001,
+      "gbifID": "1000000001",
+      "datasetKey": "00000000-0000-0000-0000-000000000001",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "scientificName": "Papilio machaon Linnaeus, 1758",
+      "taxonRank": "SPECIES",
+      "order": "Lepidoptera",
+      "family": "Papilionidae",
+      "eventDate": "2019-06-12T10:30:00",
+      "year": 2019,
+      "decimalLatitude": 40.21,
+      "decimalLongitude": 19.58,
+      "coordinateUncertaintyInMeters": 25,
+      "issues": [],
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "media": [{"type": "StillImage", "license": "http://creativecommons.org/licenses/by-nc/4.0/"}]
+    },
+    {
+      "key": 1000000002,
+      "gbifID": "1000000002",
+      "datasetKey": "00000000-0000-0000-0000-000000000002",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "scientificName": "Lepidoptera",
+      "taxonRank": "ORDER",
+      "order": "Lepidoptera",
+      "eventDate": "2008",
+      "year": 2008,
+      "decimalLatitude": 40.9,
+      "decimalLongitude": 19.45,
+      "issues": ["COORDINATE_ROUNDED"],
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "media": []
+    },
+    {
+      "key": 1000000003,
+      "gbifID": "1000000003",
+      "datasetKey": "00000000-0000-0000-0000-000000000001",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "scientificName": "Calopteryx splendens (Harris, 1780)",
+      "taxonRank": "SPECIES",
+      "order": "Odonata",
+      "family": "Calopterygidae",
+      "eventDate": "2099-01-01",
+      "year": 2099,
+      "decimalLatitude": 95.0,
+      "decimalLongitude": 19.9,
+      "issues": [],
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode"
+    }
+  ]
+}

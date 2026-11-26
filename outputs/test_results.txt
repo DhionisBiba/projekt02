@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/projekt02
+plugins: platformdirs-4.13.5, anyio-4.15.1
+collecting ... collected 8 items
+
+tests/test_gbif_probe_lib.py::test_summarize_keeps_structure PASSED      [ 12%]
+tests/test_gbif_probe_lib.py::test_summarize_rejects_unexpected_payload PASSED [ 25%]
+tests/test_gbif_probe_lib.py::test_field_coverage PASSED                 [ 37%]
+tests/test_gbif_probe_lib.py::test_validate_good_record PASSED           [ 50%]
+tests/test_gbif_probe_lib.py::test_validate_flags_problems PASSED        [ 62%]
+tests/test_gbif_probe_lib.py::test_validate_missing_and_invalid_date PASSED [ 75%]
+tests/test_gbif_probe_lib.py::test_bbox_wkt_and_params PASSED            [ 87%]
+tests/test_probe_script_offline.py::test_probe_writes_preview PASSED     [100%]
+
+============================== 8 passed in 0.05s ===============================
