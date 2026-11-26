@@ -1,0 +1,190 @@
+{
+  "description": "Mostër prove nga GBIF Occurrence API Search — Java 2. Pa DOI.",
+  "warning": "Një rresht = një rekord GBIF, jo një insekt. Zonat janë kuti përafruese.",
+  "source": "GBIF.org",
+  "api": "https://api.gbif.org/v1",
+  "script": "scripts/gbif_sample.py",
+  "script_version": "0.2-java2",
+  "config_version": "v0.1-java1",
+  "per_query_limit": 50,
+  "started_at_utc": "2026-11-26T22:23:20+00:00",
+  "taxa": [
+    {
+      "name": "Lepidoptera",
+      "url": "https://api.gbif.org/v1/species/match?name=Lepidoptera&kingdom=Animalia&strict=true",
+      "queried_at": "2026-11-26T22:23:20+00:00",
+      "taxonKey": 797,
+      "rank": "ORDER",
+      "matchType": "EXACT",
+      "status": "ACCEPTED",
+      "ok": true
+    },
+    {
+      "name": "Odonata",
+      "url": "https://api.gbif.org/v1/species/match?name=Odonata&kingdom=Animalia&strict=true",
+      "queried_at": "2026-11-26T22:23:20+00:00",
+      "taxonKey": 789,
+      "rank": "ORDER",
+      "matchType": "EXACT",
+      "status": "ACCEPTED",
+      "ok": true
+    }
+  ],
+  "queries": [
+    {
+      "area_id": "divjake_karavasta",
+      "taxon": "Lepidoptera",
+      "params": {
+        "taxonKey": 797,
+        "geometry": "POLYGON((19.38 40.85, 19.56 40.85, 19.56 41.05, 19.38 41.05, 19.38 40.85))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 50,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=797&geometry=POLYGON%28%2819.38+40.85%2C+19.56+40.85%2C+19.56+41.05%2C+19.38+41.05%2C+19.38+40.85%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=50&country=AL",
+      "queried_at_utc": "2026-11-26T22:23:20+00:00",
+      "ok": true,
+      "count_reported_by_gbif": 289,
+      "n_records_saved": 50,
+      "raw_file": "data/sample/raw/divjake_karavasta__Lepidoptera.json",
+      "raw_sha256": "21ca0ccec0d6532702b9a331e5b4cca08bf6c6be96cbe0a07bc94d98e8e3fbc3"
+    },
+    {
+      "area_id": "divjake_karavasta",
+      "taxon": "Odonata",
+      "params": {
+        "taxonKey": 789,
+        "geometry": "POLYGON((19.38 40.85, 19.56 40.85, 19.56 41.05, 19.38 41.05, 19.38 40.85))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 50,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=789&geometry=POLYGON%28%2819.38+40.85%2C+19.56+40.85%2C+19.56+41.05%2C+19.38+41.05%2C+19.38+40.85%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=50&country=AL",
+      "queried_at_utc": "2026-11-26T22:23:21+00:00",
+      "ok": true,
+      "count_reported_by_gbif": 209,
+      "n_records_saved": 50,
+      "raw_file": "data/sample/raw/divjake_karavasta__Odonata.json",
+      "raw_sha256": "137c776f4f38916c14d7a23f00cac41b19dfc02fa0819e0b9326859486f4128f"
+    },
+    {
+      "area_id": "llogara",
+      "taxon": "Lepidoptera",
+      "params": {
+        "taxonKey": 797,
+        "geometry": "POLYGON((19.52 40.17, 19.63 40.17, 19.63 40.25, 19.52 40.25, 19.52 40.17))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 50,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=797&geometry=POLYGON%28%2819.52+40.17%2C+19.63+40.17%2C+19.63+40.25%2C+19.52+40.25%2C+19.52+40.17%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=50&country=AL",
+      "queried_at_utc": "2026-11-26T22:23:22+00:00",
+      "ok": true,
+      "count_reported_by_gbif": 239,
+      "n_records_saved": 50,
+      "raw_file": "data/sample/raw/llogara__Lepidoptera.json",
+      "raw_sha256": "7056f751883bb333d1ec736500a8f892b7969635cf57a7a2ae5c9bd1cfadf517"
+    },
+    {
+      "area_id": "llogara",
+      "taxon": "Odonata",
+      "params": {
+        "taxonKey": 789,
+        "geometry": "POLYGON((19.52 40.17, 19.63 40.17, 19.63 40.25, 19.52 40.25, 19.52 40.17))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 50,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=789&geometry=POLYGON%28%2819.52+40.17%2C+19.63+40.17%2C+19.63+40.25%2C+19.52+40.25%2C+19.52+40.17%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=50&country=AL",
+      "queried_at_utc": "2026-11-26T22:23:23+00:00",
+      "ok": true,
+      "count_reported_by_gbif": 21,
+      "n_records_saved": 21,
+      "raw_file": "data/sample/raw/llogara__Odonata.json",
+      "raw_sha256": "c70ffa01fe3edff019d8d7faa6da6afb4893b73a7dd4d2bbb5cc12166da78880"
+    },
+    {
+      "area_id": "dajti",
+      "taxon": "Lepidoptera",
+      "params": {
+        "taxonKey": 797,
+        "geometry": "POLYGON((19.85 41.3, 20.05 41.3, 20.05 41.47, 19.85 41.47, 19.85 41.3))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 50,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=797&geometry=POLYGON%28%2819.85+41.3%2C+20.05+41.3%2C+20.05+41.47%2C+19.85+41.47%2C+19.85+41.3%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=50&country=AL",
+      "queried_at_utc": "2026-11-26T22:23:24+00:00",
+      "ok": true,
+      "count_reported_by_gbif": 285,
+      "n_records_saved": 50,
+      "raw_file": "data/sample/raw/dajti__Lepidoptera.json",
+      "raw_sha256": "656e4f11afc3ebc6e3fec70925a73d12a399abf984c04a7fb9045880dee6e488"
+    },
+    {
+      "area_id": "dajti",
+      "taxon": "Odonata",
+      "params": {
+        "taxonKey": 789,
+        "geometry": "POLYGON((19.85 41.3, 20.05 41.3, 20.05 41.47, 19.85 41.47, 19.85 41.3))",
+        "year": "2000,2025",
+        "hasCoordinate": "true",
+        "hasGeospatialIssue": "false",
+        "limit": 50,
+        "country": "AL"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=789&geometry=POLYGON%28%2819.85+41.3%2C+20.05+41.3%2C+20.05+41.47%2C+19.85+41.47%2C+19.85+41.3%29%29&year=2000%2C2025&hasCoordinate=true&hasGeospatialIssue=false&limit=50&country=AL",
+      "queried_at_utc": "2026-11-26T22:23:25+00:00",
+      "ok": true,
+      "count_reported_by_gbif": 12,
+      "n_records_saved": 12,
+      "raw_file": "data/sample/raw/dajti__Odonata.json",
+      "raw_sha256": "e8fc37dc528989886302e1feaaa74925bdfffe1825c6d2e48b8e1dc4f3fa2e1f"
+    }
+  ],
+  "finished_at_utc": "2026-11-26T22:23:26+00:00",
+  "sample_csv": "data/sample/sample_data.csv",
+  "sample_csv_sha256": "4682b9188dca948374adb292c944c50c9254c4d6e9636f0beb28db0235bd4efe",
+  "n_rows": 233,
+  "n_unique_record_ids": 233,
+  "n_rows_same_id_in_more_than_one_query": 0,
+  "empty_values_per_column": {
+    "record_id": 0,
+    "occurrence_id": 8,
+    "dataset_key": 0,
+    "dataset_name": 134,
+    "basis_of_record": 0,
+    "scientific_name": 0,
+    "taxon_key": 0,
+    "taxon_rank": 0,
+    "order": 0,
+    "family": 1,
+    "genus": 0,
+    "event_date": 0,
+    "year": 0,
+    "month": 0,
+    "lat": 0,
+    "lon": 0,
+    "coord_uncertainty_m": 48,
+    "country_code": 0,
+    "issues": 119,
+    "record_license": 0,
+    "n_media": 0,
+    "media_licenses": 86,
+    "area_id": 0,
+    "taxon_query": 0,
+    "validation_problems": 119
+  },
+  "unexpected_formats": {},
+  "citation_note": "Për datasetin final: GBIF.org (data) GBIF Occurrence Download https://doi.org/10.15468/dl.xxxxxx"
+}
